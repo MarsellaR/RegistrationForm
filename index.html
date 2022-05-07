@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="java.js" defer></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Title -->
+      <div class="title">
+        <span>Registration form</span>
+      </div>
+      <!-- End of title -->
+      <!-- Form action -->
+      <form action="#" onsubmit="event.preventDefault();" id="form ">
+        <!-- Box container -->
+        <div class="boxContainer">
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Full name </label>
+            <input
+              type="text"
+              class="input"
+              name="name"
+              id="firstName"
+              onchange="validateName()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="nameError" class="error"></div>
+          </div>
+          <!-- End of box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Username</label>
+            <input
+              type="text"
+              class="input"
+              name="username"
+              id="username"
+              onchange="validateUsername()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="usernameError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Date of Birth</label>
+            <input
+              type="date"
+              class="input years"
+              name="birthday"
+              max="2008-12-31"
+              min="1987-12-31"
+              id="years"
+              onchange="validateYears()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="yearsError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Email</label>
+            <input
+              type="email"
+              class="input"
+              placeholder="@email.com"
+              name="email"
+              id="email"
+              onchange="validateEmail()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="emailError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Password </label>
+            <input
+              type="password"
+              class="input"
+              placeholder="Type password you will use"
+              autocomplete="current-password"
+              name="password"
+              id="password"
+              onchange="validatePassword()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="passwordError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Repeat Password </label>
+            <input
+              type="password"
+              class="input"
+              name="retypepassword"
+              id="passwordRetype"
+              onchange="validateRetype()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="passwordRetypeError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Phone number</label>
+            <input
+              type="telNo"
+              class="input"
+              placeholder="+387"
+              name="phone"
+              id="phone"
+              onchange="validatePhone()"
+            />
+            <i class="fa-solid fa-check hide"></i>
+            <div id="phoneError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+          <!-- Single box -->
+          <div class="box">
+            <label class="label">Select Your Course</label>
+
+            <select
+              class="input"
+              name="course"
+              id="course"
+              onchange="validateCourse()"
+            >
+              <option selected value="0">Select</option>
+              <option value="Angular">Angular</option>
+              <option value="Javascript">Javascript</option>
+              <option value="React">React</option>
+              <option value="Vue.js">Vue.js</option>
+            </select>
+
+            <i class="fa-solid fa-check hide"></i>
+            <div id="courseError" class="error"></div>
+          </div>
+          <!-- End of single box -->
+        </div>
+        <!-- End of box container -->
+      </form>
+      <!-- End of form action -->
+      <!-- Buttons container -->
+      <div class="btnsContainer">
+        <button class="btn" id="submit">SUBMIT</button>
+        <button class="btn" id="cancel">CANCEL</button>
+      </div>
+      <!-- End of buttons container -->
+    </div>
+    <!-- End of container -->
+  </body>
+</html>
